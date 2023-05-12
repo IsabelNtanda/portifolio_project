@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --puple: #5280e2;
+  --green: #15cdcb;
+  --bg-dark: #212226;
+  --light-grey: #e0dede;
+  --medium-grey: #2f3034;
+  --menu-height: 7.5rem;
+}
+
+html,
+body {
+  margin: 0;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: #ffffff;
+}
+h1,
+h2 {
+  font-size: 4.4rem;
+  font-weight: 400;
+}
+.title-purple {
+  color: var(--puple);
+}
+
+P {
+  color: var(--light-grey);
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+button {
+  background-color: var(--puple);
+  border: 0;
+  padding: 0.8rem 3.5rem;
+  border-radius: 1.6rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.secondary-button {
+  display: flex;
+  align-items: center;
+  background-color: var(--medium-grey);
+  color: var(--green);
+  border: 1px solid var(--puple);
+  font-weight: bold;
+  height: 8rem;
+  gap: 1rem;
+}
+i {
+  display: none;
+  font-size: 2rem;
+}
+header .container span {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+header {
+  height: calc(100vh - var(--menu-height));
+  display: flex;
+  align-items: center;
+}
+
+header .container {
+  width: 50%;
+  padding: 1rem 10rem;
+  height: fit-content;
+}
+header .container img {
+  display: none;
+}
+header .container h1,
+h2 {
+  color: var(--green);
+}
+
+header .container button {
+  margin-top: 4rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--menu-height);
+  padding: 0 10rem;
+  background-color: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+nav ul a {
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  text-decoration: none;
+  color: var(--green);
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rem;
+  gap: 5rem;
+}
+.about .container {
+  width: 50%;
+}
+.about .img-container {
+  width: 50%;
+  text-align: center;
+  position: relative;
+}
+.about .img-container p {
+  line-height: 2.4rem;
+  color: #e0dede;
+}
+.about .img-container .line {
+  width: calc(70% + 50px);
+  height: calc(100% + 50px);
+  border: 1px solid var(--puple);
+  position: absolute;
+  top: -25px;
+  /* left: 65px; */
+  left: calc(50% - 35% - 25px);
+}
+.about .img-container .line.green {
+  transform: rotate(-3.3deg);
+  border: 1px solid var(--green);
+}
+.about .img-container img {
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+/*-------------------------------------------------------*/
+.services {
+  text-align: center;
+  margin: 13rem;
+  padding: 0 10rem;
+}
+.services-container,
+.portifolio-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 120rem;
+  gap: 1.8rem;
+  margin: 6rem auto 0;
+}
+.services-container .service-card {
+  max-width: 36rem;
+  margin: 0 auto;
+  background-color: #2f3034;
+  border: 1px solid var(--puple);
+  border-radius: 1.6rem;
+  padding: 4rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.services-container .service-card img {
+  margin-bottom: 4rem;
+  width: 9rem;
+}
+.services-container .service-card h3 {
+}
+/*----------------------------------------------------*/
+
+.portifolio {
+  padding: 0 10rem;
+  text-align: center;
+  background-image: url(..//img/bg.png);
+  margin-bottom: 10rem;
+  height: 80rem;
+  position: center;
+}
+
+.portifolio .portifolio-container .portifolio-card {
+  background: radial-gradient(
+      100% 100% at 0% 0%,
+      rgba(255, 255, 255, 0.33) 0%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(21px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 1.6rem;
+  max-width: 36rem;
+  border: 0.1px solid #fff;
+  text-align: left;
+  padding: 5rem 2.5rem;
+}
+.portifolio .portifolio-container .portifolio-card .img-container {
+  margin: 0 2.5rem 5rem;
+  position: relative;
+}
+.portifolio-container .portifolio-card .img-container .line {
+  width: calc(100% + 2.4rem);
+  height: calc(100% + 2rem);
+  border: 1px solid var(--green);
+  transform: rotate(-1.93deg);
+  border-radius: 1.6rem;
+  position: absolute;
+  top: -1.2rem;
+  left: -1rem;
+}
+.portifolio .portifolio-container .portifolio-card .img-container img {
+  width: 100%;
+}
+.language-container ul {
+  display: flex;
+  list-style: none;
+  gap: 1.1rem;
+  padding: 0;
+}
+.language-container ul li {
+  border: 0.1rem solid #15cdcb;
+  border-radius: 1.6rem;
+  padding: 0.3rem 1.5rem;
+  color: var(--green);
+}
+.language-container p {
+  margin: 0;
+}
+
+/*----------------------------------------------------------*/
+
+.curriculum {
+  padding: 0 10rem;
+  text-align: center;
+}
+
+.curriculum .container {
+  display: flex;
+  margin: 5rem 0;
+  max-width: 120rem;
+}
+
+.curriculum .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+.curriculum .container .content .curriculum-info {
+  display: grid;
+  grid-template-columns: 15rem auto;
+  grid-gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+/*------------------------------------------------*/
+.contact {
+  max-width: 70rem;
+  margin: 15rem auto 7rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+.contact h2 {
+  background: linear-gradient(180deg, #15cdcb 0%, #5280e2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact button{
+margin: 4rem auto;
+}
+.contact .social-media {
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  max-width: 36rem;
+  margin: 5rem auto 0 ;
+
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/*Small desktop*/
+
+@media (max-width: 1000px) {
+  header .container {
+    width: 100%;
+  }
+  nav ul a {
+    font-size: 1.8rem;
+  }
+  nav {
+    padding: 0 3rem;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 7rem;
+  }
+  .about .container,
+  .about .img-container {
+    width: 100%;
+  }
+  .services,
+  .portifolio {
+    padding: 0;
+  }
+  .service-card {
+    height: 39.4rem;
+  }
+  .services .services-container,
+  .portifolio .portifolio-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .portifolio {
+    height: 100%;
+  }
+  .curriculum .container {
+    flex-wrap: wrap;
+  }
+
+  .curriculum .container .img-curriculum {
+    display: block;
+    margin: 0 auto 5rem;
+    width: 100%;
+    max-width: 52rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container img {
+    display: block;
+    margin-bottom: 7rem;
+  }
+
+  nav ul {
+    padding: 0;
+  }
+  nav ul a {
+    font-size: 1.6rem;
+  }
+  nav img {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  header .container {
+    padding: 0 4rem;
+  }
+
+  nav {
+    padding: 0 1.5rem;
+    position: fixed;
+    bottom: 0;
+    top: unset;
+    width: 100%;
+  }
+  nav ul a {
+    font-size: 1.2rem;
+  }
+  i {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .about {
+    padding: 4rem;
+  }
+
+  .services {
+    margin: 7rem 0;
+  }
+  .services .services-container,
+  .portifolio .portifolio-container {
+    padding: 0 2rem;
+  }
+
+  .curriculum {
+    padding: 0 2rem;
+  }
+
+  .curriculum .container .content .curriculum-info {
+    padding: 0 1.5rem;
+  }
+}
