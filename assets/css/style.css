@@ -155,7 +155,7 @@ nav ul a {
 /*-------------------------------------------------------*/
 .services {
   text-align: center;
-  margin: 13rem;
+  margin: 13rem 0;
   padding: 0 10rem;
 }
 .services-container,
