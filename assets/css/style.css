@@ -115,6 +115,11 @@ nav ul a {
   line-height: 3.6rem;
   text-decoration: none;
   color: var(--green);
+  transition: all .4s;
+}
+
+nav ul a:hover{
+filter: brightness(1.5);
 }
 .about {
   display: flex;
@@ -178,6 +183,8 @@ nav ul a {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  transition: all .3s;
+  cursor: pointer;
 }
 .services-container .service-card img {
   margin-bottom: 4rem;
@@ -210,6 +217,12 @@ nav ul a {
   border: 0.1px solid #fff;
   text-align: left;
   padding: 5rem 2.5rem;
+  transition: all .3s;
+  cursor: pointer;
+}
+.portifolio .portifolio-container .portifolio-card:hover,
+.services-container .service-card:hover{
+  transform: translateY(-20px);
 }
 .portifolio .portifolio-container .portifolio-card .img-container {
   margin: 0 2.5rem 5rem;
