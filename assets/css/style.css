@@ -381,6 +381,11 @@ footer {
   nav img {
     display: none;
   }
+
+  .portifolio .portifolio-container .portifolio-card:hover,
+.services-container .service-card:hover{
+  transform: none;
+}
 }
 @media (max-width: 480px) {
   header .container {
